@@ -1,17 +1,131 @@
-body {
-    background-image: url('../img/bg-login.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+$green:  #93c13a;
+$green-light: #bed988;
+$black: #1a1a1a;
+$yellow: #e0c53a;
+$orange: #e45a4f;
 
-#container {
+@font-face {
+    font-family: ASAP;
+    src: url(../fonts/Asap-Medium.ttf)
+}
+//generic
+html {
+    font-size:19px !important;
+    font-family: ASAP;
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    input {
+        border-bottom-color: $green !important;
+    }
+    .btn-small {
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    .icon-white {
+        color: white;
+    }
+  }
+  
+
+#container-login {
+    background-image: url('../img/bg-login.png');
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
+    #cont-form-login {
+        width: 400px;
+
+        #form-login {
+            form {
+                margin-left: -2.5em;
+            }
+            
+            input, input+label {
+                padding-left: 40px;
+            }
+            i.material-icons {
+                left: 1.8em;
+            }
+            #actions {
+                margin-left: 2.5em;
+                margin-right: -3em;
+                
+                a {
+                    float: right;
+                }
+                div:first-child{
+                    margin-top: -20px;
+                    color: $green 
+                }
+        
+            }
+            img[src*="logo"] {
+                width: 400px;
+            }
+        }
+    }
 }
-#cont-form-login {
-    width: 400px;
+
+header {
+    height: 50px;
+    background-color: $black;
+    display: flex;
+    padding: 12px 94px;
+    justify-content: space-evenly;
+    margin-right: -5em;
+
+    #green, #yellow, #orange {
+        display: flex;
+        &>p{
+            margin: 0 2px;
+            font-size: 16px;
+            b{
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+        p+p {
+            margin-left: 25px
+        }
+    }
+    #green {
+        color: $green;
+    }
+    #yellow {
+        color: $yellow;
+    }
+    #orange {
+        color: $orange;
+    }
+    #menu {
+        cursor: pointer;
+    }
 }
-$primary-color: color("materialize-red", "lighten-2") !default;
-$secondary-color: color("purple", "lighten-1") !default;
+section#crop {
+    background-color: $green-light;
+    height: 750px;
+
+    #content {
+        width: 60%;
+        margin: auto;
+        padding: 2em;
+
+        #actions {
+            //margin: 0 5em;
+            display: flex;
+            justify-content: space-evenly;
+
+            li {
+                float: left;
+                cursor: pointer;
+            }
+        }
+    }
+}

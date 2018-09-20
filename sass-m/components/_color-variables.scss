@@ -1,5 +1,10 @@
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
 
+
+$materialize-custom: (
+    "green-1":  #93c13a
+);
+
 $materialize-red: (
   "base":       #e51c23,
   "lighten-5":  #fdeaeb,
@@ -331,6 +336,7 @@ $shades: (
 );
 
 $colors: (
+  "materialize-custom": $materialize-custom,
   "materialize-red": $materialize-red,
   "red": $red,
   "pink": $pink,

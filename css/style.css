@@ -1,15 +1,86 @@
-body {
-  background-image: url("../img/bg-login.png");
-  background-repeat: no-repeat;
-  background-size: cover; }
+@font-face {
+  font-family: ASAP;
+  src: url(../fonts/Asap-Medium.ttf); }
+html {
+  font-size: 19px !important;
+  font-family: ASAP; }
+  html body {
+    background-repeat: no-repeat;
+    background-size: cover; }
+  html input {
+    border-bottom-color: #93c13a !important; }
+  html .btn-small {
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px; }
+  html .icon-white {
+    color: white; }
 
-#container {
+#container-login {
+  background-image: url("../img/bg-login.png");
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; }
+  #container-login #cont-form-login {
+    width: 400px; }
+    #container-login #cont-form-login #form-login form {
+      margin-left: -2.5em; }
+    #container-login #cont-form-login #form-login input, #container-login #cont-form-login #form-login input + label {
+      padding-left: 40px; }
+    #container-login #cont-form-login #form-login i.material-icons {
+      left: 1.8em; }
+    #container-login #cont-form-login #form-login #actions {
+      margin-left: 2.5em;
+      margin-right: -3em; }
+      #container-login #cont-form-login #form-login #actions a {
+        float: right; }
+      #container-login #cont-form-login #form-login #actions div:first-child {
+        margin-top: -20px;
+        color: #93c13a; }
+    #container-login #cont-form-login #form-login img[src*="logo"] {
+      width: 400px; }
 
-#cont-form-login {
-  width: 400px; }
+header {
+  height: 50px;
+  background-color: #1a1a1a;
+  display: flex;
+  padding: 12px 94px;
+  justify-content: space-evenly;
+  margin-right: -5em; }
+  header #green, header #yellow, header #orange {
+    display: flex; }
+    header #green > p, header #yellow > p, header #orange > p {
+      margin: 0 2px;
+      font-size: 16px; }
+      header #green > p b, header #yellow > p b, header #orange > p b {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+    header #green p + p, header #yellow p + p, header #orange p + p {
+      margin-left: 25px; }
+  header #green {
+    color: #93c13a; }
+  header #yellow {
+    color: #e0c53a; }
+  header #orange {
+    color: #e45a4f; }
+  header #menu {
+    cursor: pointer; }
+
+section#crop {
+  background-color: #bed988;
+  height: 750px; }
+  section#crop #content {
+    width: 60%;
+    margin: auto;
+    padding: 2em; }
+    section#crop #content #actions {
+      display: flex;
+      justify-content: space-evenly; }
+      section#crop #content #actions li {
+        float: left;
+        cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
