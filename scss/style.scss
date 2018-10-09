@@ -1,16 +1,30 @@
 $green:  #93c13a;
 $green-light: #bed988;
 $black: #1a1a1a;
+// $black-alpha: #1a1a1ad6;
 $yellow: #e0c53a;
 $orange: #e45a4f;
+$gray: #b3b3b3;
 
 @font-face {
     font-family: ASAP;
     src: url(../fonts/Asap-Medium.ttf)
 }
+@font-face {
+    font-family: ASAP-R;
+    src: url(../fonts/Asap-Regular.ttf)
+}
+@font-face {
+    font-family: ASAP-sm;
+    src: url(../fonts/Asap-SemiBold.ttf)
+}
+@font-face {
+    font-family: ASAP-b;
+    src: url(../fonts/Asap-Bold.ttf)
+}
 //generic
 html {
-    font-size:19px !important;
+    // font-size:19px !important;
     font-family: ASAP;
     body {
         background-repeat: no-repeat;
@@ -24,28 +38,154 @@ html {
         font-weight: bold;
         font-size: 12px;
         letter-spacing: 1px;
+        padding: 0 25px;
+        margin: 0;
+        height: 28px;
+        
     }
+    label, input.login {
+        font-family: ASAP-R;
+        letter-spacing: 1px;
+        color: #b3b3b3;
+    }
+    
+    header {
+        line-height: 13px;
+        height: 50px;
+        background-color: $black;
+        display: flex;
+        padding: 12px 5px 12px 94px;        
+        justify-content: space-evenly;
+        align-items: center;
+    
+        #green, #yellow, #orange {
+            display: flex;
+            &>p{
+                margin: 0 2px;
+                font-size: 16px;
+                b{
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+            }
+            p+p {
+                margin-left: 25px
+            }
+        }
+        #green {
+            color: $green;
+        }
+        #yellow {
+            color: $yellow;
+        }
+        #orange {
+            color: $orange;
+        }
+        #menu {
+            cursor: pointer;
+        }
+        #one-more {
+            flex: 0 1 auto;
+        }
+        #cont-menu {
+            position: relative;
+            ul {
+                display: none;
+                position: absolute;
+                top: 15px;
+                right: 0px;
+
+                &:hover {
+                    display: block
+                }
+                li {
+                    background-color: #1a1a1adb;
+                    padding: 10px 30px 10px 40px;
+                    color: white;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    text-align: right;
+                    font-family: ASAP-sm;
+                    cursor: pointer;
+                    &+li{
+                        border-top: 1px solid #ffffff59;
+                    }
+                    &:hover {
+                        background-color: #1a1a1a;
+                    }
+                    
+                }
+            }
+            &:hover {
+                ul {
+                    display: block
+                }
+            }
+        }
+    }
+    footer {
+        width: 75%;
+        
+        div {
+            display: flex;
+            justify-content: center;
+
+            &:nth-child(2) {
+                font-size: 10px;
+                text-align: center;
+                line-height: 2em;
+                color: $gray;
+                font-family: ASAP-sm;
+            }
+        }
+        
+    }
+    .icon {
+        position: absolute;
+        width: 31px;
+        height: 31px;
+        &.user {
+            background-image: url(../img/icon-user.png);
+        }
+        &.pass {
+            background-image: url(../img/icon-pass.png);
+        }
+    }
+    
+    
     .icon-white {
         color: white;
     }
+    .asap-r {
+        font-family: ASAP-R;
+    }
+    .l-space-1 {
+        letter-spacing: 1px;
+    }
+
   }
   
 
 #container-login {
-    background-image: url('../img/bg-login.png');
+    background-image: url('../img/palm-bg.png');
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
+    background-repeat: round;
+
     #cont-form-login {
         width: 400px;
+        height: 440px;
+        margin: auto;
 
         #form-login {
-            form {
-                margin-left: -2.5em;
-            }
             
+            form {
+                margin-left: -1em;
+            }
             input, input+label {
                 padding-left: 40px;
             }
@@ -53,7 +193,6 @@ html {
                 left: 1.8em;
             }
             #actions {
-                margin-left: 2.5em;
                 margin-right: -3em;
                 
                 a {
@@ -72,60 +211,79 @@ html {
     }
 }
 
-header {
-    height: 50px;
-    background-color: $black;
-    display: flex;
-    padding: 12px 94px;
-    justify-content: space-evenly;
-    margin-right: -5em;
+#content {
+    background: linear-gradient(0deg, white 6%, $green-light 6%);
+    height: calc(100vh - 60px);
+    
+    #sunny {
+        position: absolute;
+        top: -40vh;
+        left: -16vw;
+        width: 25vw;
+        height: 60vh;
+        background:  #e0c53c url('../img/sunny.png') no-repeat 85% 83%;;
+        border-radius: 8em;
+        background-size: 5vw;
+        box-shadow: 0px 0px 45px -8px;
+        
+        p {
+            position: absolute;
+            bottom: 3vh;
+            right: 4vw;
+            font-family: ASAP-b;
+            font-size: 1vw;
+            letter-spacing: 1px;        }
+    }
+    #crop {
+        height: calc(100vh - 230px);
+        padding: 2vh 26vw 0 18vw;
 
-    #green, #yellow, #orange {
+
+        .plant {
+            height: calc((98vh - 230px)/6);
+
+            img {
+                height: calc((98vh - 230px)/6 + 6vw);
+
+            }
+            &.sick::before {    
+                content: '';
+                background-image: url(../img/wilt.png);
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                margin: 1em 2em;
+                cursor: pointer;
+            }             
+        }
+    }
+    #actions {
         display: flex;
-        &>p{
-            margin: 0 2px;
-            font-size: 16px;
-            b{
+        justify-content: space-evenly;
+        position: absolute;
+        bottom: 0px;
+        width: 60vw;
+        margin: 0vh 20vw;
+
+        li {
+            float: left;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                margin: 0;
+                font-family: ASAP-b;
                 font-size: 14px;
-                text-transform: uppercase;
-                letter-spacing: 2px;
+                letter-spacing: 1px;
             }
         }
-        p+p {
-            margin-left: 25px
-        }
-    }
-    #green {
-        color: $green;
-    }
-    #yellow {
-        color: $yellow;
-    }
-    #orange {
-        color: $orange;
-    }
-    #menu {
-        cursor: pointer;
     }
 }
-section#crop {
-    background-color: $green-light;
-    height: 750px;
 
-    #content {
-        width: 60%;
-        margin: auto;
-        padding: 2em;
-
-        #actions {
-            //margin: 0 5em;
-            display: flex;
-            justify-content: space-evenly;
-
-            li {
-                float: left;
-                cursor: pointer;
-            }
-        }
+@media only screen and (max-width: 600px) {
+    html header #green {
+        display: none;
     }
 }

@@ -3282,13 +3282,13 @@ html {
   color: rgba(0, 0, 0, 0.87); }
   @media only screen and (min-width: 0) {
     html {
-      font-size: 14px; } }
+      font-size: 19px; } }
   @media only screen and (min-width: 992px) {
     html {
-      font-size: 14.5px; } }
+      font-size: 20px; } }
   @media only screen and (min-width: 1200px) {
     html {
-      font-size: 15px; } }
+      font-size: 21px; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
@@ -4284,7 +4284,7 @@ body.keyboard-focused .dropdown-content li:focus {
     border: 0;
     color: rgba(0, 0, 0, 0.6);
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     height: 3rem;
     line-height: 32px;
     outline: 0;
@@ -4380,7 +4380,7 @@ textarea.materialize-textarea {
   outline: none;
   height: 3rem;
   width: 100%;
-  font-size: 16px;
+  font-size: 20px;
   margin: 0 0 8px 0;
   padding: 0;
   box-shadow: none;
@@ -5177,7 +5177,7 @@ select {
     height: 3rem;
     line-height: 3rem;
     width: 100%;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0 0 8px 0;
     padding: 0;
     display: block;
