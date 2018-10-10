@@ -96,7 +96,8 @@ html {
   html .icon {
     position: absolute;
     width: 31px;
-    height: 31px; }
+    height: 31px;
+    top: 10px; }
     html .icon.user {
       background-image: url(../img/icon-user.png); }
     html .icon.pass {
