@@ -25,7 +25,8 @@ html {
     padding: 0 25px;
     margin: 0;
     height: 28px; }
-  html label, html input.login {
+  html label,
+  html input.login {
     font-family: ASAP-R;
     letter-spacing: 1px;
     color: #b3b3b3; }
@@ -37,16 +38,24 @@ html {
     padding: 12px 5px 12px 94px;
     justify-content: space-evenly;
     align-items: center; }
-    html header #green, html header #yellow, html header #orange {
+    html header #green,
+    html header #yellow,
+    html header #orange {
       display: flex; }
-      html header #green > p, html header #yellow > p, html header #orange > p {
+      html header #green > p,
+      html header #yellow > p,
+      html header #orange > p {
         margin: 0 2px;
         font-size: 16px; }
-        html header #green > p b, html header #yellow > p b, html header #orange > p b {
+        html header #green > p b,
+        html header #yellow > p b,
+        html header #orange > p b {
           font-size: 14px;
           text-transform: uppercase;
           letter-spacing: 2px; }
-      html header #green p + p, html header #yellow p + p, html header #orange p + p {
+      html header #green p + p,
+      html header #yellow p + p,
+      html header #orange p + p {
         margin-left: 25px; }
     html header #green {
       color: #93c13a; }
@@ -121,9 +130,14 @@ html {
     width: 400px;
     height: 440px;
     margin: auto; }
+    #container-login #cont-form-login #form-login #logo {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     #container-login #cont-form-login #form-login form {
       margin-left: -1em; }
-    #container-login #cont-form-login #form-login input, #container-login #cont-form-login #form-login input + label {
+    #container-login #cont-form-login #form-login input,
+    #container-login #cont-form-login #form-login input + label {
       padding-left: 40px; }
     #container-login #cont-form-login #form-login i.material-icons {
       left: 1.8em; }
@@ -135,7 +149,8 @@ html {
         margin-top: -20px;
         color: #93c13a; }
     #container-login #cont-form-login #form-login img[src*="logo"] {
-      width: 400px; }
+      width: 70vw;
+      margin: 5vh 7vw 0; }
 
 #content {
   background: linear-gradient(0deg, white 6%, #bed988 6%);
@@ -191,8 +206,29 @@ html {
         font-size: 14px;
         letter-spacing: 1px; }
 
+#container-login #cont-form-login {
+  max-width: 400px;
+  height: 440px;
+  margin: auto;
+  width: 100vw; }
+
+@media only screen and (max-width: 360px) {
+  #container-login #cont-form-login {
+    width: 85vw; }
+    #container-login #cont-form-login #form-login img[src*="logo"] {
+      width: 70vw;
+      margin: 5vh 7vw 0; } }
 @media only screen and (max-width: 600px) {
   html header #green {
-    display: none; } }
+    display: none; }
+
+  #container-login #cont-form-login #form-login #actions {
+    margin-right: 0; }
+  #container-login #cont-form-login #form-login input,
+  #container-login #cont-form-login #form-login input + label {
+    padding-left: 40px;
+    width: 80%; }
+  #container-login #cont-form-login #form-login form {
+    margin-left: 0; } }
 
 /*# sourceMappingURL=style.css.map */

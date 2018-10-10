@@ -1,27 +1,30 @@
-$green:  #93c13a;
+$green : #93c13a;
 $green-light: #bed988;
 $black: #1a1a1a;
 // $black-alpha: #1a1a1ad6;
 $yellow: #e0c53a;
 $orange: #e45a4f;
 $gray: #b3b3b3;
-
 @font-face {
     font-family: ASAP;
     src: url(../fonts/Asap-Medium.ttf)
 }
+
 @font-face {
     font-family: ASAP-R;
     src: url(../fonts/Asap-Regular.ttf)
 }
+
 @font-face {
     font-family: ASAP-sm;
     src: url(../fonts/Asap-SemiBold.ttf)
 }
+
 @font-face {
     font-family: ASAP-b;
     src: url(../fonts/Asap-Bold.ttf)
 }
+
 //generic
 html {
     // font-size:19px !important;
@@ -41,29 +44,29 @@ html {
         padding: 0 25px;
         margin: 0;
         height: 28px;
-        
     }
-    label, input.login {
+    label,
+    input.login {
         font-family: ASAP-R;
         letter-spacing: 1px;
         color: #b3b3b3;
     }
-    
     header {
         line-height: 13px;
         height: 50px;
         background-color: $black;
         display: flex;
-        padding: 12px 5px 12px 94px;        
+        padding: 12px 5px 12px 94px;
         justify-content: space-evenly;
         align-items: center;
-    
-        #green, #yellow, #orange {
+        #green,
+        #yellow,
+        #orange {
             display: flex;
-            &>p{
+            &>p {
                 margin: 0 2px;
                 font-size: 16px;
-                b{
+                b {
                     font-size: 14px;
                     text-transform: uppercase;
                     letter-spacing: 2px;
@@ -95,7 +98,6 @@ html {
                 position: absolute;
                 top: 15px;
                 right: 0px;
-
                 &:hover {
                     display: block
                 }
@@ -108,13 +110,12 @@ html {
                     text-align: right;
                     font-family: ASAP-sm;
                     cursor: pointer;
-                    &+li{
+                    &+li {
                         border-top: 1px solid #ffffff59;
                     }
                     &:hover {
                         background-color: #1a1a1a;
                     }
-                    
                 }
             }
             &:hover {
@@ -126,11 +127,9 @@ html {
     }
     footer {
         width: 75%;
-        
         div {
             display: flex;
             justify-content: center;
-
             &:nth-child(2) {
                 font-size: 10px;
                 text-align: center;
@@ -139,7 +138,6 @@ html {
                 font-family: ASAP-sm;
             }
         }
-        
     }
     .icon {
         position: absolute;
@@ -153,8 +151,6 @@ html {
             background-image: url(../img/icon-pass.png);
         }
     }
-    
-    
     .icon-white {
         color: white;
     }
@@ -164,9 +160,7 @@ html {
     .l-space-1 {
         letter-spacing: 1px;
     }
-
-  }
-  
+}
 
 #container-login {
     background-image: url('../img/palm-bg.png');
@@ -176,18 +170,21 @@ html {
     align-items: center;
     height: 100vh;
     background-repeat: round;
-
     #cont-form-login {
         width: 400px;
         height: 440px;
         margin: auto;
-
         #form-login {
-            
+            #logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             form {
                 margin-left: -1em;
             }
-            input, input+label {
+            input,
+            input+label {
                 padding-left: 40px;
             }
             i.material-icons {
@@ -195,18 +192,17 @@ html {
             }
             #actions {
                 margin-right: -3em;
-                
                 a {
                     float: right;
                 }
-                div:first-child{
+                div:first-child {
                     margin-top: -20px;
-                    color: $green 
+                    color: $green
                 }
-        
             }
             img[src*="logo"] {
-                width: 400px;
+                width: 70vw;
+                margin: 5vh 7vw 0;
             }
         }
     }
@@ -215,39 +211,35 @@ html {
 #content {
     background: linear-gradient(0deg, white 6%, $green-light 6%);
     height: calc(100vh - 60px);
-    
     #sunny {
         position: absolute;
         top: -40vh;
         left: -16vw;
         width: 25vw;
         height: 60vh;
-        background:  #e0c53c url('../img/sunny.png') no-repeat 85% 83%;;
+        background: #e0c53c url('../img/sunny.png') no-repeat 85% 83%;
+        ;
         border-radius: 8em;
         background-size: 5vw;
         box-shadow: 0px 0px 45px -8px;
-        
         p {
             position: absolute;
             bottom: 3vh;
             right: 4vw;
             font-family: ASAP-b;
             font-size: 1vw;
-            letter-spacing: 1px;        }
+            letter-spacing: 1px;
+        }
     }
     #crop {
         height: calc(100vh - 230px);
         padding: 2vh 26vw 0 18vw;
-
-
         .plant {
             height: calc((98vh - 230px)/6);
-
             img {
                 height: calc((98vh - 230px)/6 + 6vw);
-
             }
-            &.sick::before {    
+            &.sick::before {
                 content: '';
                 background-image: url(../img/wilt.png);
                 width: 50px;
@@ -255,7 +247,7 @@ html {
                 position: absolute;
                 margin: 1em 2em;
                 cursor: pointer;
-            }             
+            }
         }
     }
     #actions {
@@ -265,14 +257,12 @@ html {
         bottom: 0px;
         width: 60vw;
         margin: 0vh 20vw;
-
         li {
             float: left;
             cursor: pointer;
             display: flex;
             flex-direction: column;
             align-items: center;
-
             p {
                 margin: 0;
                 font-family: ASAP-b;
@@ -283,8 +273,44 @@ html {
     }
 }
 
+#container-login #cont-form-login {
+    max-width: 400px;
+    height: 440px;
+    margin: auto;
+    width: 100vw;
+}
+
+@media only screen and (max-width: 360px) {
+    #container-login {
+        #cont-form-login {
+            width: 85vw;
+            #form-login img[src*="logo"] {
+                width: 70vw;
+                margin: 5vh 7vw 0;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 600px) {
     html header #green {
         display: none;
+    }
+    #container-login {
+        #cont-form-login {
+            #form-login {
+                #actions {
+                    margin-right: 0;
+                }
+                input,
+                input+label {
+                    padding-left: 40px;
+                    width: 80%;
+                }
+                form {
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }
