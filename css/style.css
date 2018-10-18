@@ -90,6 +90,7 @@ html header #cont-menu {
   position: relative;
 }
 html header #cont-menu ul {
+  z-index: 1;
   display: none;
   position: absolute;
   top: 15px;
@@ -276,6 +277,9 @@ html .l-space-1 {
   #container-login #cont-form-login #form-login img[src*=logo] {
     width: 70vw;
     margin: 5vh 7vw 0;
+  }
+  #container-login #cont-form-login #form-login #logo + .row {
+    margin-left: 14px;
   }
 
   #content #sunny {

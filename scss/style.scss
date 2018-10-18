@@ -94,6 +94,7 @@ html {
         #cont-menu {
             position: relative;
             ul {
+                z-index: 1;
                 display: none;
                 position: absolute;
                 top: 15px;
@@ -285,9 +286,14 @@ html {
     #container-login {
         #cont-form-login {
             width: 85vw;
-            #form-login img[src*="logo"] {
-                width: 70vw;
-                margin: 5vh 7vw 0;
+            #form-login {
+                img[src*="logo"] {
+                    width: 70vw;
+                    margin: 5vh 7vw 0;
+                }
+                #logo + .row {
+                    margin-left: 14px;
+                }
             }
         }
     }
